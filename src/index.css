@@ -42,15 +42,11 @@ body{
 	position:absolute;
 }
 .credit-card-wrap{
-	top:50%;
-	left:50%;
 	width:450px;
 	height:285px;
 	position:fixed;
 	border-radius:20px;
 	background:#5D4157;
-	margin-left:-225px;
-	margin-top:-142.5px;
 	background:linear-gradient(to left, #5D4157 , #A8CABA);
 	box-shadow:2px 2px rgba(0,0,0,.4);
 }
