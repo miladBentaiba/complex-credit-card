@@ -37,9 +37,9 @@ export default class App extends React.Component{
     if(e.target.value.length===2) e.target.value =e.target.value+'/'
     this.setState({
       valid: (typeof e.target.value[0]==='undefined')? '**/**':
-             (typeof e.target.value[1]==='undefined')? e.target.value[0]+'*/**':
-             (typeof e.target.value[3]==='undefined')? e.target.value.slice(0,1)+'/**':
-             (typeof e.target.value[4]==='undefined')? e.target.value.slice(0,3)+'*':
+             (typeof e.target.value[1]==='undefined')? e.target.value.slice(0,1)+'*/**':
+             (typeof e.target.value[3]==='undefined')? e.target.value.slice(0,2)+'/**':
+             (typeof e.target.value[4]==='undefined')? e.target.value.slice(0,4)+'*':
              e.target.value
     })
   }
