@@ -9,7 +9,7 @@ function Card() {
     <div className="credit-card-inner">
       <header className="header">
         <div className="credit-logo">
-          <div className="shape"><span className="txt">PB</span></div> <span className="text">Public Bank of Nepal</span>
+          <div className="shape"><span className="txt">PB</span></div> <span className="text">Public Bank of Tunisia</span>
         </div>
       </header>
       <div className="mk-icon-sim"><img alt="sim" src={sim} width="55px" height="40px"/></div>
