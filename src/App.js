@@ -15,13 +15,12 @@ export default class App extends React.Component{
       e.target.value=e.target.value.slice(0, e.target.value.length-1)
     }
     // check if it's a space
-    if( e.target.value[e.target.value.length-1] !==' ' && e.target.value.length%5 === 0 ){
-      e.target.value=e.target.value.slice(0, e.target.value.length-1)
+    if( e.target.value.length%5 === 4 ){
+      e.target.value=e.target.value+' '
     }
-    // console.log(e.target.value+"**** **** **** ****".slice(0,e.target.value.length) )
     this.setState({
       numb: e.target.value+"**** **** **** ****".slice(e.target.value.length)
-    })
+    }) 
   }
   fillName(e){ 
     this.setState({name: e.target.value.toUpperCase()}) 
