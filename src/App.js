@@ -18,12 +18,10 @@ export default class App extends React.Component{
     if( e.target.value[e.target.value.length-1] !==' ' && e.target.value.length%5 === 0 ){
       e.target.value=e.target.value.slice(0, e.target.value.length-1)
     }
-    this.setState({numb: (e.target.value+"*******************").substring(0, 19)})
-    // for (let i of [4,9,14]){
-    //   if (this.state.numb.length >= i+1) if(this.state.numb[i]==='*') 
-    //       let x = this.state.numb.split('')
-    //       this.setState({numb: })
-    // }
+    // console.log(e.target.value+"**** **** **** ****".slice(0,e.target.value.length) )
+    this.setState({
+      numb: e.target.value+"**** **** **** ****".slice(e.target.value.length)
+    })
   }
   fillName(e){ 
     this.setState({name: e.target.value.toUpperCase()}) 
