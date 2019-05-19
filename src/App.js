@@ -26,12 +26,25 @@ export default class App extends React.Component{
     // }
   }
   fillName(e){ 
-    this.setState({name: e.target.value}) 
+    this.setState({name: e.target.value.toUpperCase()}) 
   }
   fillValid(e){
-    if ([1,2,4,5].includes(e.target.value.length)){
-
+    //verify that the introduced values are numbers
+    if(e.target.value[e.target.value.length-1] !== parseInt(e.target.value[e.target.value.length-1]).toString()){
+      e.target.value=e.target.value.slice(0, e.target.value.length-1)
     }
+    // verify that the month is less than or equal 12
+    if(e.target.value[0]+e.target.value[1] > 12)  e.target.value=e.target.value[0]
+    if(e.target.value[0]> 1 ) e.target.value=''
+    //add slash in the index 2
+    if(e.target.value.length===2) e.target.value =e.target.value+'/'
+    this.setState({
+      valid: (typeof e.target.value[0]==='undefined')? '**/**':
+             (typeof e.target.value[1]==='undefined')? e.target.value[0]+'*/**':
+             (typeof e.target.value[3]==='undefined')? e.target.value.slice(0,1)+'/**':
+             (typeof e.target.value[4]==='undefined')? e.target.value.slice(0,3)+'*':
+             e.target.value
+    })
   }
   render(){
     return ( 
