@@ -14,7 +14,7 @@ export default class App extends React.Component{
         && e.target.value.length%5 !== 0){
       e.target.value=e.target.value.slice(0, e.target.value.length-1)
     }
-    // check if it's a space
+    // add spaces after each 4 digits
     if( e.target.value.length%5 === 4 ){
       e.target.value=e.target.value+' '
     }
