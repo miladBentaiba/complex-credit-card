@@ -7,7 +7,7 @@ export default class App extends React.Component{
       <div className="parent">
         <Card/>
         <div className="inputs">
-          <input type="number" maxlength="14" placeholder="card number"/>
+          <input type="text" maxlength="17" placeholder="card number"/>
           <input type="text" maxlength="20" placeholder="full name"/>
           <input type="text" maxlength="5" placeholder="expiration date"/>
         </div>

@@ -14,12 +14,15 @@ export default class Card extends React.Component{
           </div>
         </header>
         <div className="mk-icon-sim"><img alt="sim" src={sim} width="55px" height="40px"/></div>
-        <div className="credit-font credit-card-number" data-text="4716">4716 6109 5211 3010</div>
+        <div className="credit-font credit-card-number" data-text="4716">{this.props.numb?this.props.numb:'**** **** **** ****'}</div>
         <footer className="footer">
           <div className="clearfix">
             <div className="pull-left">
-              <div className="credit-card-date"><span className="title">Expires End</span><span className="credit-font">01/018</span></div>
-              <div className="credit-font credit-author">MOHAN KHADKA</div>
+              <div className="credit-card-date">
+                <span className="title">Expires End</span>
+                <span className="credit-font">{this.props.valid?this.props.valid:'**/**'}</span>
+              </div>
+              <div className="credit-font credit-author">{this.props.name?this.props.name:'**********'}</div>
             </div>
             <div className="pull-right"><img src={visa} alt="visa" className="mk-icon-visa"/></div>
           </div>
@@ -29,4 +32,3 @@ export default class Card extends React.Component{
     );
   }
 }
-
